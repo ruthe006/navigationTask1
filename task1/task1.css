@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.content-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-brand {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.close-btn,
+.nav-menu {
+    display: none;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-right: 70px;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #00aaff;
+    font-weight: bold;
+}
+
+.navbar.scrolled {
+    background-color: #555;
+}
+
+.nav-toggle {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+#home{
+    background-color:#ffff;
+}
+#about{
+    background-color: #ffc598;
+}
+#services{
+    background-color: #d6ff98 ;
+}
+#contact{
+    background-color:#98f8ff;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        width: 250px;
+        height: 100%;
+        padding-top: 50px;
+        border-radius: 0 10px 10px 0;
+        padding-left: 20px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 65px 40px;
+    }
+
+    .close-btn {
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        display: block;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-brand {
+        display: none;
+    }
+}
